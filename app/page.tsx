@@ -11,7 +11,6 @@ export default function Home() {
 
 
   const {
-    sendTransactionAsync,
     isPending,
     error,
   } = useSendTransaction();
