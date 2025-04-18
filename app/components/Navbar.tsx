@@ -1,5 +1,4 @@
 import React from 'react'
-import { useAccount } from 'wagmi'
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 const Navbar = () => {
   return (

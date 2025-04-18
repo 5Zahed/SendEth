@@ -3,7 +3,6 @@ import { useAccount } from "wagmi";
 import Navbar from "./components/Navbar";
 import { useEffect, useState } from "react";
 import { useSendTransaction } from 'wagmi';
-import { parseEther } from 'viem';
 import { toast } from 'sonner'
 export default function Home() {
   const [value, setValue] = useState("");
@@ -31,15 +30,6 @@ export default function Home() {
     if (!to || !value) {
       toast('Please fill all the inputs')
       return;
-    }
-
-    try {
-      const tx = await sendTransactionAsync({
-        to,
-        value: parseEther(value),
-      });
-    } catch (err) {
-      console.error('tx failed', err);
     }
   }
 
