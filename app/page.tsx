@@ -1,6 +1,5 @@
 "use client";
 import { useAccount } from "wagmi";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Navbar from "./components/Navbar";
 import { useEffect, useState } from "react";
 import { useSendTransaction } from 'wagmi';
@@ -10,7 +9,6 @@ export default function Home() {
   const [value, setValue] = useState("");
   const [to, setTo] = useState("");
   const [from, setFrom] = useState("");
-  const [txHash, setTxHash] = useState(null);
 
 
   const {
@@ -40,8 +38,6 @@ export default function Home() {
         to,
         value: parseEther(value),
       });
-      setTxHash(tx.hash);
-      console.log('tx sent:', tx.hash);
     } catch (err) {
       console.error('tx failed', err);
     }

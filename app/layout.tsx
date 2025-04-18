@@ -6,7 +6,7 @@ import '../app/styles/globals.css';
 import { RainbowKitProvider, getDefaultConfig } from "@rainbow-me/rainbowkit";
 import { WagmiProvider } from "wagmi";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
-import { mainnet, sepolia } from "wagmi/chains";
+import { sepolia } from "wagmi/chains";
 import type { ReactNode } from "react";
 
 const config = getDefaultConfig({
